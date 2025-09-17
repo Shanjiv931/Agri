@@ -22,6 +22,39 @@
     <meta name="google-site-verification" content="a6IfRKmblYhyIzKJC3l5NUPGVp4yStDKC_5GCNX7BDk" />
     
     <style>
+
+        :root {
+            --primary-green: #2d5016;
+            --light-green: #90c695;
+        }
+        .bg-primary-green {
+            background-color: var(--primary-green) !important;
+        }
+        .text-light-green {
+            color: var(--light-green) !important;
+        }
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            background-color: var(--light-green);
+            color: var(--primary-green);
+            transform: translateY(-2px);
+        }
+        .footer-link:hover {
+            color: var(--light-green) !important;
+        }
+
+
         body { font-family: 'Poppins', sans-serif; }
         .bg-primary-green { background-color: #2d5016 !important; }
         .bg-light-green { background-color: #a8d5a1 !important; }
@@ -445,25 +478,30 @@
     </section>
 
     <!-- Footer -->
-    <footer id="footer" class="bg-primary-green text-white py-5">
+     <footer id="footer" class="bg-primary-green text-white py-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
                     <h5 class="fw-bold mb-3 text-light-green">Quick Links</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="#home" class="text-white-50 text-decoration-none">
+                            <a href="#home" class="text-white-50 text-decoration-none footer-link">
                                 <i class="fas fa-chevron-right me-2"></i>Home
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="#features" class="text-white-50 text-decoration-none">
+                            <a href="#features" class="text-white-50 text-decoration-none footer-link">
                                 <i class="fas fa-chevron-right me-2"></i>Features
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="#about" class="text-white-50 text-decoration-none">
+                            <a href="#about" class="text-white-50 text-decoration-none footer-link">
                                 <i class="fas fa-chevron-right me-2"></i>About
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#contact" class="text-white-50 text-decoration-none footer-link">
+                                <i class="fas fa-chevron-right me-2"></i>Contact
                             </a>
                         </li>
                     </ul>
@@ -473,7 +511,7 @@
                     <h5 class="fw-bold mb-3 text-light-green">Extra Links</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none" 
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
                                data-bs-toggle="collapse" data-bs-target="#askQuestions">
                                 <i class="fas fa-chevron-right me-2"></i>Ask Questions
                             </a>
@@ -489,7 +527,7 @@
                             </div>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none" 
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
                                data-bs-toggle="collapse" data-bs-target="#termsOfUse">
                                 <i class="fas fa-chevron-right me-2"></i>Terms of Use
                             </a>
@@ -504,7 +542,7 @@
                             </div>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none" 
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
                                data-bs-toggle="collapse" data-bs-target="#privacyPolicy">
                                 <i class="fas fa-chevron-right me-2"></i>Privacy Policy
                             </a>
@@ -525,7 +563,7 @@
                     <h5 class="fw-bold mb-3 text-light-green">Helpful Resources</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none" 
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
                                data-bs-toggle="collapse" data-bs-target="#FAQs">
                                 <i class="fas fa-chevron-right me-2"></i>FAQs
                             </a>
@@ -540,7 +578,7 @@
                             </div>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none" 
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
                                data-bs-toggle="collapse" data-bs-target="#userGuides">
                                 <i class="fas fa-chevron-right me-2"></i>User Guides
                             </a>
@@ -555,7 +593,7 @@
                             </div>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none" 
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
                                data-bs-toggle="collapse" data-bs-target="#supportCenter">
                                 <i class="fas fa-chevron-right me-2"></i>Support Center
                             </a>
@@ -576,7 +614,7 @@
                     <h5 class="fw-bold mb-3 text-light-green">Stay Connected</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none" 
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
                                data-bs-toggle="collapse" data-bs-target="#futureScope">
                                 <i class="fas fa-chevron-right me-2"></i>Future Scope
                             </a>
@@ -585,4 +623,67 @@
                                     <p class="small mb-0">
                                         AgriSens is constantly evolving to meet the needs of modern
                                         farmers. Our team is working on adding new features like advanced
-                                        crop management tools, AI-powered farm analytics, and more.
+                                        crop management tools, AI-powered farm analytics, and integration
+                                        with IoT sensors for real-time field monitoring.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
+                               data-bs-toggle="collapse" data-bs-target="#newsletter">
+                                <i class="fas fa-chevron-right me-2"></i>Newsletter
+                            </a>
+                            <div id="newsletter" class="collapse mt-2">
+                                <div class="bg-white bg-opacity-10 p-3 rounded">
+                                    <p class="small mb-2">Stay updated with the latest AgriSens features and agricultural insights:</p>
+                                    <div class="input-group input-group-sm">
+                                        <input type="email" class="form-control" placeholder="Enter your email">
+                                        <button class="btn btn-light" type="button">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mb-3">
+                            <span class="text-white-50 d-block mb-2">
+                                <i class="fas fa-share-alt me-2"></i>Follow Us
+                            </span>
+                            <div class="d-flex gap-2">
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <hr class="my-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white-50 small">
+                        © 2024 Agri. All rights reserved. Empowering farmers with smart agricultural solutions.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-white-50 small">
+                        Made with <i class="fas fa-heart text-light-green"></i> for sustainable farming
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
