@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <title>Agri</title>
-    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
     <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
-    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <meta name="google-site-verification" content="a6IfRKmblYhyIzKJC3l5NUPGVp4yStDKC_5GCNX7BDk" />
-    
     <style>
-
         :root {
             --primary-green: #2d5016;
             --light-green: #90c695;
         }
+
         .bg-primary-green {
             background-color: var(--primary-green) !important;
         }
+
         .text-light-green {
             color: var(--light-green) !important;
         }
+
         .social-icon {
             width: 40px;
             height: 40px;
@@ -45,53 +43,206 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
+
         .social-icon:hover {
             background-color: var(--light-green);
             color: var(--primary-green);
             transform: translateY(-2px);
         }
+
         .footer-link:hover {
             color: var(--light-green) !important;
         }
 
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
 
-        body { font-family: 'Poppins', sans-serif; }
-        .bg-primary-green { background-color: #2d5016 !important; }
-        .bg-light-green { background-color: #a8d5a1 !important; }
-        .text-primary-green { color: #2d5016 !important; }
-        .btn-primary-green { background-color: #2d5016; border-color: #2d5016; }
-        .btn-primary-green:hover { background-color: #1a2f0c; border-color: #1a2f0c; }
-        .gradient-text { 
+        .bg-primary-green {
+            background-color: #2d5016 !important;
+        }
+
+        .bg-light-green {
+            background-color: #a8d5a1 !important;
+        }
+
+        .text-primary-green {
+            color: #2d5016 !important;
+        }
+
+        .btn-primary-green {
+            background-color: #2d5016;
+            border-color: #2d5016;
+        }
+
+        .btn-primary-green:hover {
+            background-color: #1a2f0c;
+            border-color: #1a2f0c;
+        }
+
+        .gradient-text {
             background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .shadow-custom { box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .rounded-custom { border-radius: 20px; }
+
+        .shadow-custom {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .rounded-custom {
+            border-radius: 20px;
+        }
+
+        .price-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-trend-up {
+            color: #28a745;
+        }
+
+        .price-trend-down {
+            color: #dc3545;
+        }
+
+        .department-card {
+            transition: all 0.3s ease;
+            border: none;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .department-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .officer-badge {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-3 gradient-text" href="#">Agri</a>
+            <a class="navbar-brand fw-bold fs-3 gradient-text" href="#">KrishiMitra</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#extension">Extension</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="#features">Features</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="#footer">Contact</a></li>
                     <li class="nav-item ms-2">
-                        <a class="btn btn-primary-green text-white px-4 rounded-pill fw-semibold" href="/explore-now/">Explore Now</a>
+                        <a class="btn btn-primary-green text-white px-4 rounded-pill fw-semibold"
+                            href="/explore-now/">Explore Now</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Agricultural Extension Officers Section -->
+    <section id="extension" class="py-5 bg-light" style="padding-top: 120px;">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-4 fw-bold gradient-text mb-4">Agricultural Extension Officers</h2>
+                    <p class="lead text-muted">Connect with local agricultural experts who provide on-ground support,
+                        training, and guidance to farmers in your region.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card department-card h-100 rounded-custom shadow-custom">
+                        <div class="card-body p-4 text-center">
+                            <div class="officer-badge">Field Expert</div>
+                            <i class="fas fa-user-tie fa-3x text-primary-green mb-3"></i>
+                            <h5 class="fw-bold text-primary-green mb-3">Local Extension Officer</h5>
+                            <p class="text-muted mb-4">Get personalized advice from agricultural extension officers in
+                                your district. They provide hands-on training, demonstrate new farming techniques, and
+                                help solve field-specific problems.</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Crop cultivation guidance
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Pest and disease
+                                    management</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Soil health assessment
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Technology adoption
+                                    support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card department-card h-100 rounded-custom shadow-custom">
+                        <div class="card-body p-4 text-center">
+                            <div class="officer-badge">Training Specialist</div>
+                            <i class="fas fa-chalkboard-teacher fa-3x text-primary-green mb-3"></i>
+                            <h5 class="fw-bold text-primary-green mb-3">Training Coordinator</h5>
+                            <p class="text-muted mb-4">Access specialized training programs, workshops, and
+                                demonstrations organized by extension officers to improve farming practices and
+                                productivity.</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Skill development
+                                    programs</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Modern farming techniques
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Equipment usage training
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Financial literacy
+                                    workshops</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card department-card h-100 rounded-custom shadow-custom">
+                        <div class="card-body p-4 text-center">
+                            <div class="officer-badge">Resource Coordinator</div>
+                            <i class="fas fa-handshake fa-3x text-primary-green mb-3"></i>
+                            <h5 class="fw-bold text-primary-green mb-3">Resource Facilitator</h5>
+                            <p class="text-muted mb-4">Connect with officers who help farmers access government schemes,
+                                subsidies, and resources for sustainable agricultural development.</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Scheme enrollment
+                                    assistance</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Subsidy application
+                                    support</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Credit linkage
+                                    facilitation</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Market linkage support
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Home Section -->
     <section id="home" class="bg-light" style="padding-top: 100px;">
@@ -105,7 +256,7 @@
                     </a>
                 </div>
                 <div class="col-lg-6">
-                    <img src="images/amit-front2.jpg" alt="AgriSens" class="img-fluid rounded-custom shadow-custom">
+                    <img src="agri1.jpg" alt="AgriSens" class="img-fluid rounded-custom shadow-custom">
                 </div>
             </div>
         </div>
@@ -118,60 +269,97 @@
                 <div class="col-lg-8 mx-auto text-center mb-5">
                     <h2 class="display-4 fw-bold gradient-text mb-4">Features</h2>
                     <p class="lead text-muted">
-                        AgriSens provides farmers with essential tools for smarter farming. It
-                        offers personalized crop recommendations based on soil and climate,
-                        helps identify plant diseases through image analysis, and provides
-                        real-time weather forecasts. The app also includes features for crop
-                        planning and guidance, ensuring optimal farming decisions for better
-                        yields and healthier crops.
+                        AgriSens provides farmers with essential tools for smarter farming. It offers personalized crop
+                        recommendations based on soil and climate, helps identify plant diseases through image analysis,
+                        and provides real-time weather forecasts. The app also includes features for crop planning and
+                        guidance, ensuring optimal farming decisions for better yields and healthier crops.
                     </p>
                 </div>
             </div>
-            
+
             <!-- Feature Buttons -->
             <div class="row mb-5">
                 <div class="col-12">
                     <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
-                        <a href="https://crop-recomm.streamlit.app/" 
-                           class="btn btn-outline-success btn-lg rounded-pill px-4 fw-semibold">
+                        <a href="https://crop-recomm.streamlit.app/"
+                            class="btn btn-outline-success btn-lg rounded-pill px-4 fw-semibold">
                             Crop Recommendations
                         </a>
-                        <a href="https://agrisens-crop-disease-pred.streamlit.app/" 
-                           class="btn btn-outline-success btn-lg rounded-pill px-4 fw-semibold">
+                        <a href="https://agrisens-crop-disease-pred.streamlit.app/"
+                            class="btn btn-outline-success btn-lg rounded-pill px-4 fw-semibold">
                             Identify Plant Diseases
                         </a>
-                        <a href="/weather-forecast/" 
-                           class="btn btn-outline-success btn-lg rounded-pill px-4 fw-semibold">
+                        <a href="/weather-forecast/"
+                            class="btn btn-outline-success btn-lg rounded-pill px-4 fw-semibold">
                             Weather Forecast
                         </a>
-                        <a href="https://agrisens-fertilizer-recommendations.streamlit.app/" 
-                           class="btn btn-outline-success btn-lg rounded-pill px-4 fw-semibold">
+                        <a href="https://agrisens-fertilizer-recommendations.streamlit.app/"
+                            class="btn btn-outline-success btn-lg rounded-pill px-4 fw-semibold">
                             Fertilizer Recommendation
                         </a>
-                        <a href="/guide/" 
-                           class="btn btn-outline-success btn-lg rounded-pill px-4 fw-semibold">
+                        <a href="/guide/" class="btn btn-outline-success btn-lg rounded-pill px-4 fw-semibold">
                             Smart Farming Guidance
+                        </a>
+                        <a href="/market-prices/" class="btn btn-outline-success btn-lg rounded-pill px-4 fw-semibold">
+                            Market Price Tracking
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Feature Cards -->
+            <!-- Market Price Tracking Feature -->
             <div class="row g-5">
-                <!-- Weather Forecast -->
                 <div class="col-12">
                     <div class="row align-items-center">
                         <div class="col-lg-6 mb-4 mb-lg-0">
-                            <img src="images/weather.jpg" alt="Weather Forecast" 
-                                 class="img-fluid rounded-custom shadow-custom">
+                            <img src="images/market-prices.jpg" alt="Market Price Tracking"
+                                class="img-fluid rounded-custom shadow-custom">
                         </div>
                         <div class="col-lg-6">
+                            <h3 class="h2 fw-bold text-primary-green mb-3">Market Price Tracking</h3>
+                            <p class="text-muted mb-4">
+                                Stay informed with real-time market prices for agricultural commodities. Track price
+                                trends, compare rates across different markets, and make informed selling decisions. Get
+                                alerts for price changes and access historical data to plan your harvest timing for
+                                maximum profitability.
+                            </p>
+                            <div class="row g-3 mb-4">
+                                <div class="col-6">
+                                    <div class="price-card rounded p-3 text-center">
+                                        <h6 class="fw-bold text-primary-green mb-1">Wheat</h6>
+                                        <p class="mb-1 fs-5 fw-bold">₹2,150/qtl</p>
+                                        <span class="price-trend-up"><i class="fas fa-arrow-up"></i> +2.5%</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="price-card rounded p-3 text-center">
+                                        <h6 class="fw-bold text-primary-green mb-1">Rice</h6>
+                                        <p class="mb-1 fs-5 fw-bold">₹3,200/qtl</p>
+                                        <span class="price-trend-down"><i class="fas fa-arrow-down"></i> -1.2%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="/market-prices/"
+                                class="btn btn-primary-green text-white px-4 rounded-pill fw-semibold">
+                                Track Prices <i class="ri-arrow-right-line ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weather Forecast -->
+                <div class="col-12">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                            <img src="images/weather.jpg" alt="Weather Forecast"
+                                class="img-fluid rounded-custom shadow-custom">
+                        </div>
+                        <div class="col-lg-6 order-lg-1">
                             <h3 class="h2 fw-bold text-primary-green mb-3">Weather Forecast</h3>
                             <p class="text-muted mb-4">
-                                Plan Your Farming With Precision! Check Real-Time Weather Insights
-                                On Temperature, Humidity, And More. Integrated With Our
-                                Crop-Prediction Model For Optimal Decisions. Explore Historical
-                                Data, Get Alerts, And Access Educational Resources.
+                                Plan Your Farming With Precision! Check Real-Time Weather Insights On Temperature,
+                                Humidity, And More. Integrated With Our Crop-Prediction Model For Optimal Decisions.
+                                Explore Historical Data, Get Alerts, And Access Educational Resources.
                             </p>
                             <a href="#features" class="btn btn-primary-green text-white px-4 rounded-pill fw-semibold">
                                 Explore <i class="ri-arrow-right-line ms-1"></i>
@@ -183,17 +371,16 @@
                 <!-- Smart Crop Planning -->
                 <div class="col-12">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-                            <img src="images/crop-planning.jpg" alt="Crop Planning" 
-                                 class="img-fluid rounded-custom shadow-custom">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <img src="images/crop-planning.jpg" alt="Crop Planning"
+                                class="img-fluid rounded-custom shadow-custom">
                         </div>
-                        <div class="col-lg-6 order-lg-1">
+                        <div class="col-lg-6">
                             <h3 class="h2 fw-bold text-primary-green mb-3">Smart Crop Planning</h3>
                             <p class="text-muted mb-4">
-                                Harness the power of data analysis to predict crop suitability,
-                                providing insights into optimal cultivation conditions. AgriSens
-                                optimizes farming decisions based on comprehensive factors like soil
-                                quality, weather, and more.
+                                Harness the power of data analysis to predict crop suitability, providing insights into
+                                optimal cultivation conditions. AgriSens optimizes farming decisions based on
+                                comprehensive factors like soil quality, weather, and more.
                             </p>
                             <a href="#features" class="btn btn-primary-green text-white px-4 rounded-pill fw-semibold">
                                 Explore <i class="ri-arrow-right-line ms-1"></i>
@@ -205,16 +392,16 @@
                 <!-- Plant Disease Identification -->
                 <div class="col-12">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 mb-4 mb-lg-0">
-                            <img src="images/desease-dect.jpeg" alt="Disease Detection" 
-                                 class="img-fluid rounded-custom shadow-custom">
+                        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                            <img src="images/desease-dect.jpeg" alt="Disease Detection"
+                                class="img-fluid rounded-custom shadow-custom">
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 order-lg-1">
                             <h3 class="h2 fw-bold text-primary-green mb-3">Plant Disease Identification</h3>
                             <p class="text-muted mb-4">
-                                Assist farmers in detecting plant diseases by enabling image
-                                uploads, utilizing this analysis for prompt and precise
-                                identification, enhancing farming efficiency and crop management.
+                                Assist farmers in detecting plant diseases by enabling image uploads, utilizing this
+                                analysis for prompt and precise identification, enhancing farming efficiency and crop
+                                management.
                             </p>
                             <a href="#features" class="btn btn-primary-green text-white px-4 rounded-pill fw-semibold">
                                 Explore <i class="ri-arrow-right-line ms-1"></i>
@@ -226,18 +413,17 @@
                 <!-- Smart Farming Guidance -->
                 <div class="col-12">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-                            <img src="images/guide.png" alt="Farming Guidance" 
-                                 class="img-fluid rounded-custom shadow-custom">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <img src="images/guide.png" alt="Farming Guidance"
+                                class="img-fluid rounded-custom shadow-custom">
                         </div>
-                        <div class="col-lg-6 order-lg-1">
+                        <div class="col-lg-6">
                             <h3 class="h2 fw-bold text-primary-green mb-3">Smart Farming, Simple Guidance</h3>
                             <p class="text-muted mb-4">
-                                Smart Crop Guide offers a simple, step-by-step plan for growing
-                                crops. It provides expert planting tips, tracks growth stages, and
-                                sends watering reminders. The app also gives pest control advice,
-                                harvest timing, weather updates, and fertilizer recommendations to
-                                ensure healthy crops.
+                                Smart Crop Guide offers a simple, step-by-step plan for growing crops. It provides
+                                expert planting tips, tracks growth stages, and sends watering reminders. The app also
+                                gives pest control advice, harvest timing, weather updates, and fertilizer
+                                recommendations to ensure healthy crops.
                             </p>
                             <a href="#features" class="btn btn-primary-green text-white px-4 rounded-pill fw-semibold">
                                 Explore <i class="ri-arrow-right-line ms-1"></i>
@@ -249,15 +435,15 @@
                 <!-- Modern Farms -->
                 <div class="col-12">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 mb-4 mb-lg-0">
-                            <img src="images/modern-farm.jpg" alt="Modern Farms" 
-                                 class="img-fluid rounded-custom shadow-custom">
+                        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                            <img src="images/modern-farm.jpg" alt="Modern Farms"
+                                class="img-fluid rounded-custom shadow-custom">
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 order-lg-1">
                             <h3 class="h2 fw-bold text-primary-green mb-3">Innovations for Modern Farms</h3>
                             <p class="text-muted mb-4">
-                                Smart Crop Tech, Precision Farming, and Customizable Solutions for
-                                Sustainable and Efficient Agriculture!
+                                Smart Crop Tech, Precision Farming, and Customizable Solutions for Sustainable and
+                                Efficient Agriculture!
                             </p>
                             <a href="#features" class="btn btn-primary-green text-white px-4 rounded-pill fw-semibold">
                                 Explore <i class="ri-arrow-right-line ms-1"></i>
@@ -269,17 +455,17 @@
                 <!-- User-Friendly Interface -->
                 <div class="col-12">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-                            <img src="images/User-Friendly.jpeg" alt="User Friendly" 
-                                 class="img-fluid rounded-custom shadow-custom">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <img src="images/User-Friendly.jpeg" alt="User Friendly"
+                                class="img-fluid rounded-custom shadow-custom">
                         </div>
-                        <div class="col-lg-6 order-lg-1">
+                        <div class="col-lg-6">
                             <h3 class="h2 fw-bold text-primary-green mb-3">User-Friendly Interface</h3>
                             <p class="text-muted mb-4">
-                                Our application features a user-friendly interface designed for
-                                farmers of all technological backgrounds. With simple inputs like
-                                location and crop selection, users can effortlessly access detailed
-                                information on crop suitability and recommended planting schedules.
+                                Our application features a user-friendly interface designed for farmers of all
+                                technological backgrounds. With simple inputs like location and crop selection, users
+                                can effortlessly access detailed information on crop suitability and recommended
+                                planting schedules.
                             </p>
                             <a href="#features" class="btn btn-primary-green text-white px-4 rounded-pill fw-semibold">
                                 Explore <i class="ri-arrow-right-line ms-1"></i>
@@ -291,7 +477,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!--
     <section id="about" class="py-5 bg-light">
         <div class="container py-5">
             <div class="row">
@@ -300,86 +486,83 @@
                     <p class="lead text-muted">Introduce the talented individuals shaping the Agri project.</p>
                 </div>
             </div>
-            
-            <!-- First row - 3 members -->
             <div class="row g-4 mb-4">
-                <!-- Team Member 1 -->
+                
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100 border-0 shadow-custom rounded-custom overflow-hidden">
                         <div class="card-body text-center p-4 position-relative">
-                            <div class="bg-light-green bg-opacity-25 position-absolute top-0 start-0 w-100" style="height: 80px;"></div>
-                            <img src="images/jai.png" alt="Jai Darira" 
-                                 class="rounded-circle mb-3 position-relative" width="120" height="120" 
-                                 style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <div class="bg-light-green bg-opacity-25 position-absolute top-0 start-0 w-100"
+                                style="height: 80px;"></div>
+                            <img src="images/jai.png" alt="Jai Darira" class="rounded-circle mb-3 position-relative"
+                                width="120" height="120"
+                                style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             <h5 class="fw-bold text-primary-green mb-2">Jai Darira</h5>
                             <p class="text-muted mb-3">BCA | AI & ML<br />VIT UNIVERSITY</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a href="https://instagram.com" target="_blank" 
-                                   class="btn btn-outline-primary rounded-circle p-2 text-decoration-none">
+                                <a href="https://instagram.com" target="_blank"
+                                    class="btn btn-outline-primary rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="http://linkedin.com/in/jai" target="_blank" 
-                                   class="btn btn-outline-primary rounded-circle p-2 text-decoration-none">
+                                <a href="http://linkedin.com/in/jai" target="_blank"
+                                    class="btn btn-outline-primary rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
-                                <a href="https://github.com/jai" target="_blank" 
-                                   class="btn btn-outline-primary rounded-circle p-2 text-decoration-none">
+                                <a href="https://github.com/jai" target="_blank"
+                                    class="btn btn-outline-primary rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Team Member 2 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100 border-0 shadow-custom rounded-custom overflow-hidden">
                         <div class="card-body text-center p-4 position-relative">
-                            <div class="bg-success bg-opacity-25 position-absolute top-0 start-0 w-100" style="height: 80px;"></div>
-                            <img src="images/veda.jpg" alt="Vedagna" 
-                                 class="rounded-circle mb-3 position-relative" width="120" height="120" 
-                                 style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <div class="bg-success bg-opacity-25 position-absolute top-0 start-0 w-100"
+                                style="height: 80px;"></div>
+                            <img src="images/veda.jpg" alt="Vedagna" class="rounded-circle mb-3 position-relative"
+                                width="120" height="120"
+                                style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             <h5 class="fw-bold text-primary-green mb-2">Vedagna</h5>
                             <p class="text-muted mb-3">BCA | AI & ML<br />VIT UNIVERSITY</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a href="https://instagram.com" 
-                                   target="_blank" class="btn btn-outline-success rounded-circle p-2 text-decoration-none">
+                                <a href="https://instagram.com" target="_blank"
+                                    class="btn btn-outline-success rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/veda" 
-                                   target="_blank" class="btn btn-outline-success rounded-circle p-2 text-decoration-none">
+                                <a href="https://www.linkedin.com/in/veda" target="_blank"
+                                    class="btn btn-outline-success rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
-                                <a href="https://github.com/veda" target="_blank" 
-                                   class="btn btn-outline-success rounded-circle p-2 text-decoration-none">
+                                <a href="https://github.com/veda" target="_blank"
+                                    class="btn btn-outline-success rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Team Member 3 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100 border-0 shadow-custom rounded-custom overflow-hidden">
                         <div class="card-body text-center p-4 position-relative">
-                            <div class="bg-info bg-opacity-25 position-absolute top-0 start-0 w-100" style="height: 80px;"></div>
-                            <img src="images/vamsi.jpg" alt="Vamsi Krishna" 
-                                 class="rounded-circle mb-3 position-relative" width="120" height="120" 
-                                 style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <div class="bg-info bg-opacity-25 position-absolute top-0 start-0 w-100"
+                                style="height: 80px;"></div>
+                            <img src="images/vamsi.jpg" alt="Vamsi Krishna"
+                                class="rounded-circle mb-3 position-relative" width="120" height="120"
+                                style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             <h5 class="fw-bold text-primary-green mb-2">Vamsi Krishna</h5>
                             <p class="text-muted mb-3">B.Tech | CSE<br />VIT UNIVERSITY</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a href="https://www.instagram.com" 
-                                   target="_blank" class="btn btn-outline-info rounded-circle p-2 text-decoration-none">
+                                <a href="https://www.instagram.com" target="_blank"
+                                    class="btn btn-outline-info rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/vamsi" 
-                                   target="_blank" class="btn btn-outline-info rounded-circle p-2 text-decoration-none">
+                                <a href="https://www.linkedin.com/in/vamsi" target="_blank"
+                                    class="btn btn-outline-info rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
-                                <a href="https://github.com/vamsi" target="_blank" 
-                                   class="btn btn-outline-info rounded-circle p-2 text-decoration-none">
+                                <a href="https://github.com/vamsi" target="_blank"
+                                    class="btn btn-outline-info rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -387,86 +570,86 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Second row - 3 members -->
+            
             <div class="row g-4">
-                <!-- Team Member 4 - Jaya Vashistha -->
+                
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100 border-0 shadow-custom rounded-custom overflow-hidden">
                         <div class="card-body text-center p-4 position-relative">
-                            <div class="bg-warning bg-opacity-25 position-absolute top-0 start-0 w-100" style="height: 80px;"></div>
-                            <img src="images/umar.jpg" alt="Umar Farooq" 
-                                 class="rounded-circle mb-3 position-relative" width="120" height="120" 
-                                 style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <div class="bg-warning bg-opacity-25 position-absolute top-0 start-0 w-100"
+                                style="height: 80px;"></div>
+                            <img src="images/umar.jpg" alt="Umar Farooq" class="rounded-circle mb-3 position-relative"
+                                width="120" height="120"
+                                style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             <h5 class="fw-bold text-primary-green mb-2">Umar Farooq</h5>
                             <p class="text-muted mb-3">BCA<br />VIT UNIVERSITY</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a href="https://www.instagram.com" 
-                                   target="_blank" class="btn btn-outline-warning rounded-circle p-2 text-decoration-none">
+                                <a href="https://www.instagram.com" target="_blank"
+                                    class="btn btn-outline-warning rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/umar" 
-                                   target="_blank" class="btn btn-outline-warning rounded-circle p-2 text-decoration-none">
+                                <a href="https://www.linkedin.com/in/umar" target="_blank"
+                                    class="btn btn-outline-warning rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
-                                <a href="#" target="_blank" 
-                                   class="btn btn-outline-warning rounded-circle p-2 text-decoration-none">
+                                <a href="#" target="_blank"
+                                    class="btn btn-outline-warning rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Team Member 5 -->
+                
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100 border-0 shadow-custom rounded-custom overflow-hidden">
                         <div class="card-body text-center p-4 position-relative">
-                            <div class="bg-danger bg-opacity-25 position-absolute top-0 start-0 w-100" style="height: 80px;"></div>
-                            <img src="images/tasneem.jpg" alt="Tasneem" 
-                                 class="rounded-circle mb-3 position-relative" width="120" height="120" 
-                                 style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <div class="bg-danger bg-opacity-25 position-absolute top-0 start-0 w-100"
+                                style="height: 80px;"></div>
+                            <img src="images/tasneem.jpg" alt="Tasneem" class="rounded-circle mb-3 position-relative"
+                                width="120" height="120"
+                                style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             <h5 class="fw-bold text-primary-green mb-2">Tasneem</h5>
                             <p class="text-muted mb-3">B.Tech | CSE<br />VIT UNIVERSITY</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a href="https://www.instagram.com" 
-                                   target="_blank" class="btn btn-outline-danger rounded-circle p-2 text-decoration-none">
+                                <a href="https://www.instagram.com" target="_blank"
+                                    class="btn btn-outline-danger rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/tasneem" 
-                                   target="_blank" class="btn btn-outline-danger rounded-circle p-2 text-decoration-none">
+                                <a href="https://www.linkedin.com/in/tasneem" target="_blank"
+                                    class="btn btn-outline-danger rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
-                                <a href="#" target="_blank" 
-                                   class="btn btn-outline-danger rounded-circle p-2 text-decoration-none">
+                                <a href="#" target="_blank"
+                                    class="btn btn-outline-danger rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Team Member 6 -->
+                
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100 border-0 shadow-custom rounded-custom overflow-hidden">
                         <div class="card-body text-center p-4 position-relative">
-                            <div class="bg-secondary bg-opacity-25 position-absolute top-0 start-0 w-100" style="height: 80px;"></div>
-                            <img src="images/shanjiv.jpg" alt="Shanjivkkumar Ramasamy" 
-                                 class="rounded-circle mb-3 position-relative" width="120" height="120" 
-                                 style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <div class="bg-secondary bg-opacity-25 position-absolute top-0 start-0 w-100"
+                                style="height: 80px;"></div>
+                            <img src="images/shanjiv.jpg" alt="Shanjivkkumar Ramasamy"
+                                class="rounded-circle mb-3 position-relative" width="120" height="120"
+                                style="object-fit: cover; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                             <h5 class="fw-bold text-primary-green mb-2">Shanjivkkumar Ramsamy</h5>
                             <p class="text-muted mb-3">BCS | AI & ML<br />VIT UNIVERSITY</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a href="https://www.instagram.com/" target="_blank" 
-                                   class="btn btn-outline-secondary rounded-circle p-2 text-decoration-none">
+                                <a href="https://www.instagram.com/" target="_blank"
+                                    class="btn btn-outline-secondary rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/shanjiv" 
-                                   target="_blank" class="btn btn-outline-secondary rounded-circle p-2 text-decoration-none">
+                                <a href="https://www.linkedin.com/in/shanjiv" target="_blank"
+                                    class="btn btn-outline-secondary rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
-                                <a href="#" target="_blank" 
-                                   class="btn btn-outline-secondary rounded-circle p-2 text-decoration-none">
+                                <a href="#" target="_blank"
+                                    class="btn btn-outline-secondary rounded-circle p-2 text-decoration-none">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -476,14 +659,25 @@
             </div>
         </div>
     </section>
+-->
 
     <!-- Footer -->
-     <footer id="footer" class="bg-primary-green text-white py-5">
+    <footer id="footer" class="bg-primary-green text-white py-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
                     <h5 class="fw-bold mb-3 text-light-green">Quick Links</h5>
                     <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="#extension" class="text-white-50 text-decoration-none footer-link">
+                                <i class="fas fa-chevron-right me-2"></i>Extension
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#departments" class="text-white-50 text-decoration-none footer-link">
+                                <i class="fas fa-chevron-right me-2"></i>Departments
+                            </a>
+                        </li>
                         <li class="mb-2">
                             <a href="#home" class="text-white-50 text-decoration-none footer-link">
                                 <i class="fas fa-chevron-right me-2"></i>Home
@@ -506,137 +700,129 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="col-lg-3 col-md-6">
                     <h5 class="fw-bold mb-3 text-light-green">Extra Links</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
-                               data-bs-toggle="collapse" data-bs-target="#askQuestions">
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" data-bs-toggle="collapse"
+                                data-bs-target="#askQuestions">
                                 <i class="fas fa-chevron-right me-2"></i>Ask Questions
                             </a>
                             <div id="askQuestions" class="collapse mt-2">
                                 <div class="bg-white bg-opacity-10 p-3 rounded">
                                     <p class="small mb-0">
-                                        If you have any questions or need assistance with using AgriSens,
-                                        feel free to reach out. Our team is ready to help you with any
-                                        queries related to crop recommendations, disease identification,
-                                        or other features.
+                                        If you have any questions or need assistance with using AgriSens, feel free to
+                                        reach out. Our team is ready to help you with any queries related to crop
+                                        recommendations, disease identification, or other features.
                                     </p>
                                 </div>
                             </div>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
-                               data-bs-toggle="collapse" data-bs-target="#termsOfUse">
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" data-bs-toggle="collapse"
+                                data-bs-target="#termsOfUse">
                                 <i class="fas fa-chevron-right me-2"></i>Terms of Use
                             </a>
                             <div id="termsOfUse" class="collapse mt-2">
                                 <div class="bg-white bg-opacity-10 p-3 rounded">
                                     <p class="small mb-0">
-                                        Please review our Terms of Use to understand the rules and
-                                        guidelines for using AgriSens. By accessing or using our platform,
-                                        you agree to abide by these terms.
+                                        Please review our Terms of Use to understand the rules and guidelines for using
+                                        AgriSens. By accessing or using our platform, you agree to abide by these terms.
                                     </p>
                                 </div>
                             </div>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
-                               data-bs-toggle="collapse" data-bs-target="#privacyPolicy">
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" data-bs-toggle="collapse"
+                                data-bs-target="#privacyPolicy">
                                 <i class="fas fa-chevron-right me-2"></i>Privacy Policy
                             </a>
                             <div id="privacyPolicy" class="collapse mt-2">
                                 <div class="bg-white bg-opacity-10 p-3 rounded">
                                     <p class="small mb-0">
-                                        Your privacy is important to us. Our Privacy Policy explains how
-                                        we collect, use, and protect your data to ensure your experience
-                                        is secure and reliable.
+                                        Your privacy is important to us. Our Privacy Policy explains how we collect,
+                                        use, and protect your data to ensure your experience is secure and reliable.
                                     </p>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
-
                 <div class="col-lg-3 col-md-6">
                     <h5 class="fw-bold mb-3 text-light-green">Helpful Resources</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
-                               data-bs-toggle="collapse" data-bs-target="#FAQs">
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" data-bs-toggle="collapse"
+                                data-bs-target="#FAQs">
                                 <i class="fas fa-chevron-right me-2"></i>FAQs
                             </a>
                             <div id="FAQs" class="collapse mt-2">
                                 <div class="bg-white bg-opacity-10 p-3 rounded">
                                     <p class="small mb-0">
-                                        Find answers to common questions about how AgriSens works,
-                                        including how to use the crop recommendation tool, disease
-                                        identification feature, and more.
+                                        Find answers to common questions about how AgriSens works, including how to use
+                                        the crop recommendation tool, disease identification feature, and more.
                                     </p>
                                 </div>
                             </div>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
-                               data-bs-toggle="collapse" data-bs-target="#userGuides">
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" data-bs-toggle="collapse"
+                                data-bs-target="#userGuides">
                                 <i class="fas fa-chevron-right me-2"></i>User Guides
                             </a>
                             <div id="userGuides" class="collapse mt-2">
                                 <div class="bg-white bg-opacity-10 p-3 rounded">
                                     <p class="small mb-0">
-                                        Access detailed user guides for using each feature on AgriSens,
-                                        including crop recommendations, plant disease identification, and
-                                        weather forecast tools.
+                                        Access detailed user guides for using each feature on AgriSens, including crop
+                                        recommendations, plant disease identification, and weather forecast tools.
                                     </p>
                                 </div>
                             </div>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
-                               data-bs-toggle="collapse" data-bs-target="#supportCenter">
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" data-bs-toggle="collapse"
+                                data-bs-target="#supportCenter">
                                 <i class="fas fa-chevron-right me-2"></i>Support Center
                             </a>
                             <div id="supportCenter" class="collapse mt-2">
                                 <div class="bg-white bg-opacity-10 p-3 rounded">
                                     <p class="small mb-0">
-                                        If you're facing any issues or need further assistance, visit our
-                                        Support Center. Here, you can find troubleshooting tips, contact
-                                        support, and resolve common problems.
+                                        If you're facing any issues or need further assistance, visit our Support
+                                        Center. Here, you can find troubleshooting tips, contact support, and resolve
+                                        common problems.
                                     </p>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
-
                 <div class="col-lg-3 col-md-6">
                     <h5 class="fw-bold mb-3 text-light-green">Stay Connected</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
-                               data-bs-toggle="collapse" data-bs-target="#futureScope">
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" data-bs-toggle="collapse"
+                                data-bs-target="#futureScope">
                                 <i class="fas fa-chevron-right me-2"></i>Future Scope
                             </a>
                             <div id="futureScope" class="collapse mt-2">
                                 <div class="bg-white bg-opacity-10 p-3 rounded">
                                     <p class="small mb-0">
-                                        AgriSens is constantly evolving to meet the needs of modern
-                                        farmers. Our team is working on adding new features like advanced
-                                        crop management tools, AI-powered farm analytics, and integration
-                                        with IoT sensors for real-time field monitoring.
+                                        AgriSens is constantly evolving to meet the needs of modern farmers. Our team is
+                                        working on adding new features like advanced crop management tools, AI-powered
+                                        farm analytics, and integration with IoT sensors for real-time field monitoring.
                                     </p>
                                 </div>
                             </div>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="text-white-50 text-decoration-none footer-link" 
-                               data-bs-toggle="collapse" data-bs-target="#newsletter">
+                            <a href="#" class="text-white-50 text-decoration-none footer-link" data-bs-toggle="collapse"
+                                data-bs-target="#newsletter">
                                 <i class="fas fa-chevron-right me-2"></i>Newsletter
                             </a>
                             <div id="newsletter" class="collapse mt-2">
                                 <div class="bg-white bg-opacity-10 p-3 rounded">
-                                    <p class="small mb-2">Stay updated with the latest AgriSens features and agricultural insights:</p>
+                                    <p class="small mb-2">Stay updated with the latest AgriSens features and
+                                        agricultural insights:</p>
                                     <div class="input-group input-group-sm">
                                         <input type="email" class="form-control" placeholder="Enter your email">
                                         <button class="btn btn-light" type="button">Subscribe</button>
@@ -666,7 +852,6 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Copyright Section -->
             <hr class="my-4 opacity-25">
             <div class="row align-items-center">
@@ -683,8 +868,7 @@
             </div>
         </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
 
+</html>
